@@ -1,0 +1,292 @@
+// ✅ Navigation
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  background-color: white;
+
+  .logo img {
+    height: 20px;
+  }
+
+  .nav-links {
+    a {
+      margin-left: 2rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.875rem;
+      color: #333;
+    }
+  }
+}
+
+.error {
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.contact-us-section {
+  background: radial-gradient(
+    circle at 71% 49%,
+    #d36e5d 324px 285px,
+    transparent 326px 285px),
+  #e7816b;
+
+  
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  .form-box {
+    position: relative; 
+    z-index: 1;
+
+    .form-content {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .form-text {
+      flex: 1;
+      min-width: 280px;
+      padding-top: 5rem;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        max-width: 500px;
+      }
+    }
+
+    form {
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      input, textarea {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid white;
+        padding: 0.75rem 0.25rem;
+        color: white;
+        font-size: 1rem;
+        outline: none;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+
+      textarea {
+        height: 100px;
+        resize: none;
+      }
+
+      button {
+        align-self: flex-end;
+        padding: 0.75rem 2.5rem;
+        background: white;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.2s;
+
+        &:hover {
+          background: #f3f3f3;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .form-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  form {
+    align-self: stretch;
+  }
+}
+
+
+
+// ✅ Locations
+.locations {
+  position: relative; // لازم نضيفها علشان ::before يتثبت عليه
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  padding: 4rem 1rem;
+  background: none; // احذف الـ gradient القديم
+
+  // 🎨 خلفية بشكل مقوس
+  &::before {
+    content: '';
+    position: absolute;
+    top: 121px;
+    left: 68%;
+    transform: translateX(-50%);
+    width: 55%;
+    max-width: 1200px;
+    height: 69%;
+    background: #f8f9fb;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    z-index: 0;
+
+  }
+
+  .location {
+    position: relative;
+    z-index: 1; 
+    text-align: center;
+
+    img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+      object-fit: cover;
+      background: linear-gradient(to right, #e9e0e1, #ffffff);
+    }
+
+    h3 {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      color: #e7816b;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+    }
+
+    button {
+      background: #e7816b;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
+// ✅ Footer
+.footer {
+  background-color: #1d1c1e;
+  color: white;
+  padding: 3rem 2rem;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+
+    .footer-logo {
+      height: 24px;
+      object-fit: contain;
+      color: white;
+    }
+    
+
+    .footer-nav {
+      display: flex;
+      gap: 2rem;
+
+      a {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.875rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .footer-block {
+      flex: 1;
+      min-width: 250px;
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.8);
+
+        strong {
+          color: white;
+        }
+      }
+    }
+
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 1.5rem;
+      color: #e7816b;
+
+      i {
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-top {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

@@ -135,14 +135,13 @@
 
 // ✅ Locations
 .locations {
-  position: relative; // لازم نضيفها علشان ::before يتثبت عليه
+  position: relative; 
   display: flex;
   justify-content: center;
   gap: 7rem;
   padding: 4rem 1rem;
-  background: none; // احذف الـ gradient القديم
-
-  // 🎨 خلفية بشكل مقوس
+  background: none; 
+  
   &::before {
     content: '';
     position: absolute;

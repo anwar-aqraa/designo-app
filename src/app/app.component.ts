@@ -1,10 +1,14 @@
+import { provideRouter, RouterModule } from '@angular/router';
+import { routes } from './app.routes';
 import { Component } from '@angular/core';
-import { ContactComponent } from './contact/contact.component';
+import { HeaderComponent } from "./header/header.component";
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ContactComponent],
+  imports: [RouterModule, HeaderComponent, FooterComponent],  // تأكد من استيراد RouterModule
+  // Removed providers as provideRouter should be used in bootstrapApplication
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

@@ -1,0 +1,83 @@
+$primary-color: #e7816b;
+$secondary-color: #fdf3f0;
+$dark-color: #1d1c1e;
+$light-color: #ffffff;
+
+.container {
+    max-width: 1090px;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+  }
+
+
+  .cta {
+    position: relative;
+    background: $primary-color;
+    border-radius: 15px;
+    padding: 7rem 3rem;
+    color: $light-color;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -269px;
+      left: 271px;
+      width: 614px;
+      height: 607px;
+      background: #de7a62;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 40px;
+      right: -183px;
+      width: 400px;
+      height: 500px;
+      background: #de7a62;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .cta-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;  /* زر على اليمين */
+      gap: 2rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2, p {
+      margin: 0;
+    }
+
+    .text {
+      flex: 1 1 60%;
+    }
+
+    button {
+      flex-shrink: 0;
+      background: $light-color;
+      color: black;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+        background: darken($light-color, 10%);
+        color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  

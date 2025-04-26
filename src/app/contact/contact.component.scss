@@ -10,6 +10,26 @@ body {
   padding: 0 1rem;
 }
 
+.shape-background {
+  position: relative; 
+  min-height: 50px; 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 190px;
+    left: 68%;
+    transform: translateX(-50%);
+    width: 56%;
+    max-width: 1200px;
+    height: 497%;
+    background: #f8f9fb;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 153px;
+    z-index: 1;
+  }
+}
+
+
 
 .contact-us-section {
   background: radial-gradient(circle at 71% 49%, #d36e5d 324px 285px, transparent 326px 285px), #e7816b;
@@ -96,13 +116,7 @@ body {
     }
   }
 }
-
-
-
-
 @media (max-width: 768px) {
-
-
   .contact-us-section {
     padding: 3rem 1rem;
 
@@ -118,45 +132,5 @@ body {
       }
     }
   }
-
-  .locations {
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-
-    &::before {
-      width: 100%;
-      left: 50%;
-      top: 0;
-      height: 60%;
-      transform: translateX(-50%);
-      border-radius: 0;
-    }
-
-    .location img {
-      width: 120px;
-      height: 120px;
-    }
-  }
-
-  .footer-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 2rem;
-  }
 }
 
-@media (max-width: 480px) {
-  .footer {
-    padding: 2rem 1rem;
-  }
-
-  .footer-socials {
-    justify-content: center;
-  }
-}

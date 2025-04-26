@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { OurCompanyComponent } from './our-company/our-company.component';
-import { LocationsComponent } from './locations/locations.component';
+import { LocationsComponent } from './locations-section/locations.component';
 import { CtaComponent } from './cta/cta.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';

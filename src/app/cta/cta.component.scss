@@ -11,10 +11,12 @@ $light-color: #ffffff;
 
 
   .cta {
+    transform: translateY(27px);
+    z-index: 10;
     position: relative;
-    background: $primary-color;
+    background: #e7816b;
     border-radius: 15px;
-    padding: 7rem 3rem;
+    padding: 6rem 3rem;
     color: $light-color;
     overflow: hidden;
 

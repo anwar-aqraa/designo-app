@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
 import { AppComponent } from './app.component';
 import { OurCompanyComponent } from './our-company/our-company.component';
 import { LocationsComponent } from './locations/locations.component';

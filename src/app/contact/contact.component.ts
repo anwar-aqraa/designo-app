@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { LocationsComponent } from "../locations/locations.component";
+
+
 
 @Component({
   selector: 'app-contact',
   standalone: false,
- // imports: [CommonModule, FormsModule, LocationsComponent],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })

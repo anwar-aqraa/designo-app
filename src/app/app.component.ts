@@ -6,8 +6,8 @@ import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterModule, HeaderComponent, FooterComponent],  // تأكد من استيراد RouterModule
+  standalone: false,
+ // imports: [RouterModule, HeaderComponent, FooterComponent],  // تأكد من استيراد RouterModule
   // Removed providers as provideRouter should be used in bootstrapApplication
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

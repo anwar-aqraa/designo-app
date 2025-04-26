@@ -5,8 +5,8 @@ import { LocationsComponent } from "../locations/locations.component";
 
 @Component({
   selector: 'app-contact',
-  standalone: true,
-  imports: [CommonModule, FormsModule, LocationsComponent],
+  standalone: false,
+ // imports: [CommonModule, FormsModule, LocationsComponent],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })

@@ -5,8 +5,8 @@ import { CtaComponent } from "../cta/cta.component";
 
 @Component({
   selector: 'app-our-company',
-  standalone: true,
-  imports: [CommonModule, LocationsComponent, CtaComponent],
+  standalone: false,
+ // imports: [CommonModule, LocationsComponent, CtaComponent],
   templateUrl: './our-company.component.html',
   styleUrls: ['./our-company.component.scss']
 })

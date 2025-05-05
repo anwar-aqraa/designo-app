@@ -7,6 +7,15 @@
   overflow: hidden;
   max-height: 36rem;
 
+  @media (max-width: 1200px) {
+    margin: 0 4rem;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 1rem;
+    max-height: none;
+  }
+
   .hero-content {
     max-width: 1110px;
     margin: 0 auto;
@@ -15,10 +24,17 @@
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 3rem;
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
-  
+
   .hero-content::before {
     content: "";
     position: absolute;
@@ -30,8 +46,14 @@
     background: #de7a62;
     border-radius: 75%;
     z-index: -1;
+
+    @media (max-width: 768px) {
+      width: 400px;
+      height: 400px;
+      bottom: -150px;
+      left: 50%;
+    }
   }
-  
 
   .text {
     flex: 1 1 40%;
@@ -61,21 +83,29 @@
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #ffad9b;
+        background: darken(#ffffff, 10%);
+        color: darken(#e7816b, 10%);
       }
+    }
+
+    @media (max-width: 768px) {
+      padding: 1.5rem;
     }
   }
 
   .image {
     flex: 1 1 50%;
- 
+
     img {
       width: 100%;
       height: auto;
     }
+
+    @media (max-width: 768px) {
+      order: -1;
+    }
   }
 }
-
 
 .projects {
   max-width: 1110px;
@@ -88,6 +118,15 @@
     "web app"
     "web graphic";
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "web"
+      "app"
+      "graphic";
+  }
 
   .card {
     position: relative;
@@ -108,7 +147,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-     // background: rgba(231, 129, 107, 0.75);
       color: white;
       display: flex;
       flex-direction: column;
@@ -130,7 +168,6 @@
         letter-spacing: 2px;
         text-transform: uppercase;
       }
-
     }
   }
 
@@ -145,13 +182,9 @@
   }
 }
 
-
-
 .values {
- // background-color: #fdf3f0;
   padding: 6rem 2rem;
   text-align: center;
-
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -162,8 +195,6 @@
     padding: 1rem;
 
     img {
-    //  height: 80px;
-      margin-bottom: 2rem;
       width: 150px;
       height: 150px;
       margin-bottom: 1rem;

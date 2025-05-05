@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './app.routes';
+import { OfficeLocationsComponent } from './office-locations/office-locations.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { AppRoutingModule } from './app.routes';
     CtaComponent,
     HeaderComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    OfficeLocationsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

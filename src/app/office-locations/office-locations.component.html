@@ -1,0 +1,42 @@
+<div class="page-wrapper">
+    <div class="page-content">
+      <div class="location-row" *ngFor="let office of offices">
+        <ng-container *ngIf="office.country === 'Australia'; else defaultOrder">
+          <div class="map-container">
+            <img [src]="office.mapUrl" alt="Map of {{ office.country }}">
+          </div>
+          <div class="location-card">
+            <div class="card-text">
+              <h2>{{ office.country }}</h2>
+              <p class="office-name">{{ office.name }}</p>
+              <p class="address">{{ office.address }}</p>
+              <div class="contact">
+                <p><strong>Contact</strong></p>
+                <p><span>P :</span> {{ office.phone }}</p>
+                <p><span>M :</span> {{ office.email }}</p>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <ng-template #defaultOrder>
+          <div class="location-card">
+            <div class="card-text">
+              <h2>{{ office.country }}</h2>
+              <p class="office-name">{{ office.name }}</p>
+              <p class="address">{{ office.address }}</p>
+              <div class="contact">
+                <p><strong>Contact</strong></p>
+                <p><span>P :</span> {{ office.phone }}</p>
+                <p><span>M :</span> {{ office.email }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="map-container">
+            <img [src]="office.mapUrl" alt="Map of {{ office.country }}">
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  
+  <app-cta></app-cta>
